@@ -1,0 +1,30 @@
+{
+    "targetPlatforms": [
+        "aplite", 
+        "basalt", 
+        "chalk", 
+        "diorite"
+    ], 
+    "displayName": "unobstructed-area", 
+    "name": "unobstructed-area", 
+    "messageKeys": {
+        "dummy": 10000
+    }, 
+    "companyName": "MakeAwesomeHappen", 
+    "enableMultiJS": true, 
+    "versionLabel": "1.0", 
+    "capabilities": [], 
+    "sdkVersion": "3", 
+    "appKeys": {
+        "dummy": 10000
+    }, 
+    "longName": "unobstructed-area", 
+    "shortName": "unobstructed-area", 
+    "watchapp": {
+        "watchface": true
+    }, 
+    "resources": {
+        "media": []
+    }, 
+    "uuid": "81b11904-35c4-4b07-96d1-c16c214d7c30"
+}
