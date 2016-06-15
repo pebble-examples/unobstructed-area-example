@@ -50,17 +50,14 @@ static void prv_unobstructed_change(AnimationProgress progress, void *context) {
 static void prv_main_window_load(Window *window) {
   s_window_layer = window_get_root_layer(window);
   GRect fullscreen = layer_get_bounds(s_window_layer);
-  GRect visible_bounds = layer_get_unobstructed_bounds(s_window_layer);
-
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "Full %d", (int)fullscreen.size.h);
-  APP_LOG(APP_LOG_LEVEL_DEBUG, "Visible %d", (int)visible_bounds.size.h);
+  GRect unobstructed_bounds = layer_get_unobstructed_bounds(s_window_layer);
 
   // Determine if the screen is obstructed when the app starts
-  s_screen_is_obstructed = !grect_equal(&fullscreen, &visible_bounds);
+  s_screen_is_obstructed = !grect_equal(&fullscreen, &unobstructed_bounds);
 
   // Create a text layer
-  s_text_layer = text_layer_create(GRect(0, (visible_bounds.size.h/2)-10,
-    visible_bounds.size.w, 20));
+  s_text_layer = text_layer_create(GRect(0, (unobstructed_bounds.size.h/2)-10,
+    unobstructed_bounds.size.w, 20));
   text_layer_set_background_color(s_text_layer, GColorWhite);
   text_layer_set_text_color(s_text_layer, GColorBlack);
   text_layer_set_text_alignment(s_text_layer, GTextAlignmentCenter);
