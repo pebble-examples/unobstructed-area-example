@@ -74,6 +74,7 @@ static void prv_main_window_load(Window *window) {
     .change = prv_unobstructed_change,
     .did_change = prv_unobstructed_did_change
   };
+  unobstructed_area_service_subscribe(handlers, NULL);
 }
 
 static void prv_main_window_unload(Window *window) {
