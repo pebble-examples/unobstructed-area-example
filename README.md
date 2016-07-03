@@ -1,6 +1,8 @@
 # unobstructed-area-example
 
-An example of the UnobstructedArea API
+An example of the UnobstructedArea API.
+
+Requires SDK4.
 
 ## Guide
 
